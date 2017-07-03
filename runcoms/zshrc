@@ -11,3 +11,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Alias Definitions: Load shared aliases file with bash
+source $HOME/.aliases
+
+# Homebrew installations will get precedence over stock osx binaries
+export PATH=/usr/local/bin:$PATH
+
+# VirtualEnvWrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/work
+source /usr/local/bin/virtualenvwrapper.sh
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Editor
+# export EDITOR="subl -n -w"
+export EDITOR="vim"
